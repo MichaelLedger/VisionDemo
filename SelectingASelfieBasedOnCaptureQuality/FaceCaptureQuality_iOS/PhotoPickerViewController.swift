@@ -95,7 +95,7 @@ extension PhotoPickerViewController {
                 // Use Apple Vision to analyze the image and get a score
                 let visionRequestHandler = VNImageRequestHandler(data: imageData, options: [:])
                 // VNImageBasedRequest: The abstract superclass for image analysis requests that focus on a specific part of an image.
-                VNDetectFaceRectanglesRequest
+                // VNDetectFaceRectanglesRequest
                 let visionRequest = VNClassifyImageRequest { request, error in
                     guard let observations = request.results as? [VNClassificationObservation], let topResult = observations.first else {
                         return
